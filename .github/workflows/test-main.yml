@@ -1,5 +1,6 @@
 name: ghaction-thumbnails GitHub runner
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
