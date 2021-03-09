@@ -23,9 +23,9 @@ jobs:
           subfolder: '%W'
       - name: Commit thumbnail folder
         run: |
-          echo "Committing folder ${{env.thumbnails}}"
+          echo "Committing folder thumbnails"
           git config --local user.name "${{github.actor}}"
           git config --local user.email "${{github.actor}}@users.noreply.github.com"
-          git add ./${{env.thumbnails}} || exit 0
+          git add ./thumbnails || exit 0
           git commit -m "[skip ci] Auto-generated missing thumbnails" -a || exit 0
           git push -f -q https://${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}
