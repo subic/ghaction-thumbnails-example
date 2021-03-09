@@ -2,7 +2,10 @@ name: GitHub action img-resizer
 on:
   workflow_dispatch:
   push:
-    branches: [master]
+    branches:
+      - master
+    paths:
+      - 'test/*'
 jobs:
   build:
     runs-on: ubuntu-latest
